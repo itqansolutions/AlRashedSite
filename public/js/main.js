@@ -40,13 +40,17 @@ if (hamburger && mobileNav) {
 // ── i18n ──────────────────────────────────────────────────────
 async function loadLang(lang) {
   try {
-    const res  = await fetch(`lang/${lang}.json`);
+    const res  = await fetch(`lang/${lang}.json?v=${Date.now()}`);
     const dict = await res.json();
+    
+    // Process standard tags
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
       if (dict[key] !== undefined) {
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = dict[key];
+        } else if (el.tagName.toLowerCase() === 'title') {
+          document.title = dict[key];
         } else {
           el.textContent = dict[key];
         }
