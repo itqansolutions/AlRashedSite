@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تتبع الحجز | الراشد لصيانة السيارات</title>
+  <link rel="canonical" href="https://alrashed.com.eg/booking-status.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    .status-card {
+      background: var(--dark-2);
+      border: 1px solid var(--dark-3);
+      border-radius: var(--r-md);
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .status-card::before {
+      content: '';
+      position: absolute;
+      top:0; left:0; right:0; height:4px;
+    }
+    .status-card.pending::before   { background: #f39c12; }
+    .status-card.confirmed::before { background: #27ae60; }
+    .status-card.cancelled::before { background: #e74c3c; }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .status-card.pending .status-badge   { background: rgba(243, 156, 18, 0.2); color: #f39c12; }
+    .status-card.confirmed .status-badge { background: rgba(39, 174, 96, 0.2); color: #27ae60; }
+    .status-card.cancelled .status-badge { background: rgba(231, 76, 60, 0.2); color: #e74c3c; }
+
+    .status-details p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .status-details strong { color: var(--gold); margin-inline-end: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+      <ul class="navbar__links">
+        <li><a href="index.html"    data-i18n="nav.home">الرئيسية</a></li>
+        <li><a class="btn btn--primary" href="booking.html" data-i18n="nav.booking">احجز موعدًا</a></li>
+      </ul>
+      <button id="langToggle" class="lang-toggle">EN</button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag" data-i18n="status.nav">تتبع</span>
+      <h1 class="page-hero__title" data-i18n="status.title">تتبع حالة الحجز</h1>
+    </div>
+  </div>
+
+  <section class="section section--dark">
+    <div class="container" style="max-width: 600px;">
+      
+      <div class="contact-form-box reveal" style="padding: 2.5rem;">
+        <h3 style="margin-bottom:1rem; text-align:center;">أدخل رقم الهاتف للبحث</h3>
+        <p style="text-align:center; color:var(--silver); font-size:0.9rem; margin-bottom:2rem;">ابحث برقم الهاتف الذي سجلت به الحجز لمتابعة حالة الموعد.</p>
+        
+        <form id="statusForm">
+          <div class="form-group" style="display:flex; gap:10px;">
+            <input type="tel" id="searchPhone" name="phone" placeholder="رقم الهاتف..." required style="flex:1;">
+            <button type="submit" class="btn btn--primary" id="searchBtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="searchError" style="color:#ff5050; font-size:0.9rem; margin-top:10px; display:none;"></div>
+        </form>
+
+        <div id="resultsContainer"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        &copy; <span id="year"></span> AL-RASHED — <span data-i18n="footer.developed">تم التطوير بواسطة</span> <a href="https://itqansolutions.org" target="_blank" style="color:var(--gold); text-decoration:none; font-weight:bold;">Itqan Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Status dictionary for EN/AR translation handling if needed
+    const statusDict = {
+      'pending':   { ar: 'قيد المراجعة', en: 'Pending' },
+      'confirmed': { ar: 'مؤكد',         en: 'Confirmed' },
+      'cancelled': { ar: 'ملغي',         en: 'Cancelled' }
+    };
+
+    const form = document.getElementById('statusForm');
+    const searchBtn = document.getElementById('searchBtn');
+    const errorDiv = document.getElementById('searchError');
+    const resultsContainer = document.getElementById('resultsContainer');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const phone = document.getElementById('searchPhone').value;
+      if(!phone) return;
+
+      searchBtn.disabled = true;
+      searchBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i>';
+      errorDiv.style.display = 'none';
+      resultsContainer.innerHTML = '';
+
+      try {
+        const res = await fetch(`/api/bookings/status?phone=${encodeURIComponent(phone)}`);
+        const result = await res.json();
+
+        if (res.ok && result.success) {
+          if (result.data.length === 0) {
+            errorDiv.textContent = document.documentElement.lang === 'en' ? 'No bookings found for this number.' : 'لا توجد حجوزات مسجلة بهذا الرقم.';
+            errorDiv.style.display = 'block';
+          } else {
+            const lang = document.documentElement.lang || 'ar';
+            result.data.forEach(booking => {
+              const statusText = statusDict[booking.status] ? statusDict[booking.status][lang] : booking.status;
+              
+              const card = document.createElement('div');
+              card.className = `status-card ${booking.status}`;
+              card.innerHTML = `
+                <div class="status-badge">${statusText}</div>
+                <div class="status-details">
+                  <p><strong>السيارة:</strong> ${booking.brand} ${booking.model} (${booking.year})</p>
+                  <p><strong>الخدمة:</strong> ${booking.service}</p>
+                  <p><strong>تاريخ الطلب:</strong> ${new Date(booking.date).toLocaleDateString()}</p>
+                </div>
+              `;
+              resultsContainer.appendChild(card);
+            });
+          }
+        } else {
+          errorDiv.textContent = result.error || 'حدث خطأ.';
+          errorDiv.style.display = 'block';
+        }
+      } catch (err) {
+        errorDiv.textContent = 'حدث خطأ في الاتصال بالخادم.';
+        errorDiv.style.display = 'block';
+      } finally {
+        searchBtn.disabled = false;
+        searchBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+      }
+    });
+
+  </script>
+</body>
+</html>

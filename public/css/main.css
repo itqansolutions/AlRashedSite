@@ -1,0 +1,169 @@
+/* ============================================================
+   AL-RASHED – MAIN.CSS
+   Design tokens · Reset · Layout utilities · Typography
+   ============================================================ */
+
+/* ── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* ── Design Tokens ────────────────────────────────────────── */
+:root {
+  /* Colors */
+  --black:       #000000;
+  --dark:        #0d0d0d;
+  --dark-2:      #1c1c1c;
+  --dark-3:      #2a2a2a;
+  --silver:      #c0c0c0;
+  --silver-dim:  #8a8a8a;
+  --gold:        #b8962e;
+  --gold-light:  #d4af4f;
+  --gold-dark:   #8a6e1a;
+  --white:       #ffffff;
+  --white-dim:   rgba(255,255,255,0.08);
+
+  /* Typography */
+  --font-head:   'Montserrat', sans-serif;
+  --font-body:   'Open Sans', sans-serif;
+
+  /* Spacing */
+  --sp-xs:  0.5rem;
+  --sp-sm:  1rem;
+  --sp-md:  2rem;
+  --sp-lg:  4rem;
+  --sp-xl:  7rem;
+
+  /* Border radius */
+  --r-sm:  4px;
+  --r-md:  10px;
+  --r-lg:  20px;
+  --r-pill:999px;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 10px rgba(0,0,0,0.5);
+  --shadow-md:  0 8px 32px rgba(0,0,0,0.6);
+  --shadow-gold:0 4px 20px rgba(184,150,46,0.3);
+
+  /* Transitions */
+  --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition:  0.3s var(--ease);
+
+  /* Navbar height */
+  --nav-h: 75px;
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* RTL support */
+[dir="rtl"] body { font-family: 'Segoe UI', var(--font-body); }
+
+img  { max-width: 100%; height: auto; display: block; }
+a    { text-decoration: none; color: inherit; }
+ul   { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ── Typography ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+
+p  { color: var(--silver); font-size: 1.05rem; max-width: 65ch; }
+
+/* ── Layout Utilities ─────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--sp-md);
+}
+
+.section {
+  padding-block: var(--sp-xl);
+}
+
+.section--dark   { background-color: var(--dark); }
+.section--darker { background-color: var(--dark-2); }
+
+/* Grid helpers */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-md); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-md); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-md); }
+
+/* Flex helpers */
+.flex        { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between{ display: flex; align-items: center; justify-content: space-between; }
+.flex-col    { display: flex; flex-direction: column; }
+.gap-sm { gap: var(--sp-sm); }
+.gap-md { gap: var(--sp-md); }
+
+/* Text alignment */
+.text-center { text-align: center; }
+.text-gold   { color: var(--gold); }
+.text-silver { color: var(--silver); }
+
+/* ── Section Header ───────────────────────────────────────── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--sp-lg);
+}
+.section-header h2 { margin-bottom: var(--sp-xs); }
+.section-header p  { margin-inline: auto; }
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-dark);
+  border-radius: var(--r-pill);
+  padding: 4px 14px;
+  margin-bottom: var(--sp-sm);
+}
+
+/* Gold divider line */
+.gold-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+  border-radius: var(--r-pill);
+  margin: var(--sp-sm) auto 0;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark-2); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+
+/* ── Responsive Breakpoints ───────────────────────────────── */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  :root { --sp-xl: 4rem; --sp-lg: 2.5rem; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}

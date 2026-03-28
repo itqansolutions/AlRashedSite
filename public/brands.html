@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>العلامات التجارية | الراشد لصيانة السيارات</title>
+  <meta name="description" content="الراشد متخصص في صيانة مرسيدس بنز ورينج روفر بجميع موديلاتهم في مصر.">
+  <link rel="canonical" href="https://alrashed.com.eg/brands.html">
+  <meta property="og:title" content="العلامات التجارية | الراشد">
+  <meta property="og:image" content="/assets/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    .brand-hero {
+      min-height: 320px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: var(--nav-h);
+    }
+    .brand-hero__panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 3rem;
+      gap: 1.5rem;
+      text-align: center;
+      transition: background var(--transition);
+    }
+    .brand-hero__panel--merc  { background: linear-gradient(160deg, #0d0d0d, #1c1c1c); }
+    .brand-hero__panel--range { background: linear-gradient(160deg, #1a1208, #2a1e08); border-right: none; }
+    .brand-hero__panel img    { height: 70px; width:auto; filter:brightness(0.9); }
+    .brand-hero__panel h2     { font-size:1.8rem; }
+    .brand-hero__panel p      { color: var(--silver-dim); font-size: 0.95rem; max-width: 30ch; margin:0 auto; }
+    .brand-divider {
+      width: 1px;
+      background: var(--gold-dark);
+      align-self: stretch;
+    }
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .model-chip {
+      background: var(--dark-3);
+      border: 1px solid #3a3a3a;
+      border-radius: var(--r-sm);
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      color: var(--silver);
+      text-align: center;
+      font-family: var(--font-head);
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+    .model-chip:hover { border-color: var(--gold); color: var(--gold); }
+    @media (max-width: 768px) {
+      .brand-hero { grid-template-columns: 1fr; }
+      .brand-divider { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+      <ul class="navbar__links">
+        <li><a href="index.html"    data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="about.html"    data-i18n="nav.about">من نحن</a></li>
+        <li><a href="services.html" data-i18n="nav.services">خدماتنا</a></li>
+        <li><a href="brands.html"   data-i18n="nav.brands" class="active">العلامات</a></li>
+        <li><a href="gallery.html"  data-i18n="nav.gallery">معرض الصور</a></li>
+        <li><a href="branches.html" data-i18n="nav.branches">فروعنا</a></li>
+        <li><a href="contact.html"  data-i18n="nav.contact">تواصل</a></li>
+        <li><a class="btn btn--primary" href="booking.html" data-i18n="nav.booking">احجز موعدًا</a></li>
+      </ul>
+      <button id="langToggle" class="lang-toggle">EN</button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+    <a href="about.html" data-i18n="nav.about">من نحن</a>
+    <a href="services.html" data-i18n="nav.services">خدماتنا</a>
+    <a href="brands.html" data-i18n="nav.brands">العلامات</a>
+    <a href="gallery.html" data-i18n="nav.gallery">معرض الصور</a>
+    <a href="branches.html" data-i18n="nav.branches">فروعنا</a>
+    <a href="contact.html" data-i18n="nav.contact">تواصل</a>
+    <a class="btn btn--primary" href="booking.html" data-i18n="nav.booking">احجز موعدًا</a>
+  </div>
+
+  <!-- BRAND HERO PANELS -->
+  <div class="brand-hero">
+    <div class="brand-hero__panel brand-hero__panel--merc">
+      <img src="/assets/brands/mercedes.png" alt="Mercedes-Benz" loading="lazy" onerror="this.style.display='none'">
+      <h2>Mercedes-Benz</h2>
+      <p data-i18n="brands.all">جميع الموديلات مدعومة</p>
+      <a href="booking.html?brand=mercedes" class="btn btn--ghost" data-i18n="nav.booking">احجز موعدًا</a>
+    </div>
+    <div class="brand-divider"></div>
+    <div class="brand-hero__panel brand-hero__panel--range">
+      <img src="/assets/brands/rangerover.png" alt="Range Rover" loading="lazy" onerror="this.style.display='none'">
+      <h2>Range Rover</h2>
+      <p data-i18n="brands.all">جميع الموديلات مدعومة</p>
+      <a href="booking.html?brand=rangerover" class="btn btn--ghost" data-i18n="nav.booking">احجز موعدًا</a>
+    </div>
+  </div>
+
+  <!-- MERCEDES MODELS -->
+  <section class="section section--darker">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Mercedes-Benz</span>
+        <h2>موديلات المرسيدس المدعومة</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="models-grid reveal">
+        <div class="model-chip">A-Class</div>
+        <div class="model-chip">B-Class</div>
+        <div class="model-chip">C-Class</div>
+        <div class="model-chip">E-Class</div>
+        <div class="model-chip">S-Class</div>
+        <div class="model-chip">CLA</div>
+        <div class="model-chip">CLS</div>
+        <div class="model-chip">GLA</div>
+        <div class="model-chip">GLB</div>
+        <div class="model-chip">GLC</div>
+        <div class="model-chip">GLE</div>
+        <div class="model-chip">GLS</div>
+        <div class="model-chip">G-Class</div>
+        <div class="model-chip">AMG GT</div>
+        <div class="model-chip">EQC</div>
+        <div class="model-chip">EQS</div>
+        <div class="model-chip">EQE</div>
+        <div class="model-chip">وغيرها...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RANGE ROVER MODELS -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Range Rover</span>
+        <h2>موديلات رينج روفر المدعومة</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="models-grid reveal">
+        <div class="model-chip">Range Rover</div>
+        <div class="model-chip">Sport</div>
+        <div class="model-chip">Velar</div>
+        <div class="model-chip">Evoque</div>
+        <div class="model-chip">Discovery</div>
+        <div class="model-chip">Discovery Sport</div>
+        <div class="model-chip">Defender</div>
+        <div class="model-chip">وغيرها...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--darker" style="text-align:center;">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-tag">ابدأ الآن</span>
+        <h2>احجز موعد صيانة سيارتك</h2>
+        <div class="gold-line"></div>
+        <br><br>
+        <a href="booking.html" class="btn btn--primary" style="font-size:1rem;padding:1rem 2.5rem;" data-i18n="nav.booking">احجز موعدًا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+          <p>مركز خدمة سيارات فاخر متخصص في مرسيدس ورينج روفر، الشيخ زايد – القاهرة.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/201000000000" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer__col"><h4>روابط سريعة</h4><ul><li><a href="about.html">من نحن</a></li><li><a href="services.html">خدماتنا</a></li><li><a href="brands.html">العلامات</a></li><li><a href="gallery.html">معرض الصور</a></li></ul></div>
+        <div class="footer__col"><h4>خدماتنا</h4><ul><li><a href="services.html">الصيانة الدورية</a></li><li><a href="services.html">التشخيص</a></li><li><a href="services.html">الميكانيكا</a></li><li><a href="services.html">الهيكل والدهان</a></li></ul></div>
+        <div class="footer__col"><h4>تواصل معنا</h4><ul><li><a href="tel:16618">📞 16618</a></li><li><a href="mailto:info@alrashed.com">✉ info@alrashed.com</a></li><li><a href="branches.html">📍 الشيخ زايد</a></li><li><a href="booking-status.html">🔍 تتبع حجزك</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        &copy; <span id="year"></span> AL-RASHED — <span data-i18n="footer.developed">تم التطوير بواسطة</span> <a href="https://itqansolutions.org" target="_blank" style="color:var(--gold); text-decoration:none; font-weight:bold;">Itqan Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/201000000000?text=أريد%20حجز%20خدمة" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

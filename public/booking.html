@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>احجز موعدك | الراشد لصيانة السيارات</title>
+  <meta name="description" content="احجز موعد صيانة لسيارتك المرسيدس أو رينج روفر في مركز الراشد بخطوات بسيطة.">
+  <link rel="canonical" href="https://alrashed.com.eg/booking.html">
+  <meta property="og:title" content="احجز موعدك | الراشد">
+  <meta property="og:image" content="/assets/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+      <ul class="navbar__links">
+        <li><a href="index.html"    data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="about.html"    data-i18n="nav.about">من نحن</a></li>
+        <li><a href="services.html" data-i18n="nav.services">خدماتنا</a></li>
+        <li><a href="brands.html"   data-i18n="nav.brands">العلامات</a></li>
+        <li><a href="gallery.html"  data-i18n="nav.gallery">معرض الصور</a></li>
+        <li><a href="branches.html" data-i18n="nav.branches">فروعنا</a></li>
+        <li><a href="contact.html"  data-i18n="nav.contact">تواصل</a></li>
+        <li><a class="btn btn--primary" href="booking.html" data-i18n="nav.booking" style="pointer-events:none;">احجز موعدًا</a></li>
+      </ul>
+      <button id="langToggle" class="lang-toggle">EN</button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+    <a href="about.html" data-i18n="nav.about">من نحن</a>
+    <a href="services.html" data-i18n="nav.services">خدماتنا</a>
+    <a href="brands.html" data-i18n="nav.brands">العلامات</a>
+    <a href="gallery.html" data-i18n="nav.gallery">معرض الصور</a>
+    <a href="branches.html" data-i18n="nav.branches">فروعنا</a>
+    <a href="contact.html" data-i18n="nav.contact">تواصل</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag" data-i18n="nav.booking">احجز موعدًا</span>
+      <h1 class="page-hero__title" data-i18n="booking.title">احجز موعدك</h1>
+    </div>
+  </div>
+
+  <!-- BOOKING FORM SECTION -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="booking-wrapper">
+        
+        <!-- Progress Steps -->
+        <div class="booking-steps" id="bookingSteps">
+          <div class="step-dot active" data-step="1">
+            <div class="step-dot__circle">1</div>
+            <span class="step-dot__label" data-i18n="booking.step1">المعلومات الشخصية</span>
+          </div>
+          <div class="step-dot" data-step="2">
+            <div class="step-dot__circle">2</div>
+            <span class="step-dot__label" data-i18n="booking.step2">بيانات السيارة</span>
+          </div>
+          <div class="step-dot" data-step="3">
+            <div class="step-dot__circle">3</div>
+            <span class="step-dot__label" data-i18n="booking.step3">الخدمة والتاريخ</span>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form id="bookingForm" class="contact-form-box reveal">
+          
+          <!-- Step 1: Personal -->
+          <div class="step-panel active" id="step1">
+            <h3 style="margin-bottom:1.5rem; color:var(--gold);" data-i18n="booking.step1">المعلومات الشخصية</h3>
+            <div class="form-group">
+              <label for="name" data-i18n="booking.name">الاسم الكامل</label>
+              <input type="text" id="name" name="name" required placeholder="مثال: أحمد محمد">
+            </div>
+            <div class="form-group">
+              <label for="phone" data-i18n="booking.phone">رقم الهاتف</label>
+              <input type="tel" id="phone" name="phone" required placeholder="01X XXXX XXXX">
+            </div>
+          </div>
+
+          <!-- Step 2: Vehicle -->
+          <div class="step-panel" id="step2">
+            <h3 style="margin-bottom:1.5rem; color:var(--gold);" data-i18n="booking.step2">بيانات السيارة</h3>
+            <div class="form-group">
+              <label for="brand" data-i18n="booking.brand">العلامة التجارية</label>
+              <select id="brand" name="brand" required>
+                <option value="" disabled selected>اختر العلامة التجارية</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Range Rover">Range Rover</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="model" data-i18n="booking.model">الموديل</label>
+              <select id="model" name="model" required disabled>
+                <option value="" disabled selected>اختر الموديل</option>
+                <!-- Populated by JS based on Brand -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="year" data-i18n="booking.year">سنة الصنع</label>
+              <select id="year" name="year" required disabled>
+                <option value="" disabled selected>اختر السنة</option>
+                <!-- Populated by JS (2000-2025) -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 3: Service & Date -->
+          <div class="step-panel" id="step3">
+            <h3 style="margin-bottom:1.5rem; color:var(--gold);" data-i18n="booking.step3">الخدمة والتاريخ</h3>
+            <div class="form-group">
+              <label for="service" data-i18n="booking.service">الخدمة المطلوبة</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>اختر الخدمة</option>
+                <option value="الصيانة الدورية" data-i18n="services.maint">الصيانة الدورية</option>
+                <option value="التشخيص والفحص" data-i18n="services.diag">التشخيص والفحص</option>
+                <option value="الإصلاحات الميكانيكية" data-i18n="services.mech">الإصلاحات الميكانيكية</option>
+                <option value="الهيكل والدهان" data-i18n="services.body">الهيكل والدهان</option>
+                <option value="فحص ما قبل الشراء" data-i18n="services.insp">فحص ما قبل الشراء</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date" data-i18n="booking.date">التاريخ المفضل</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="booking-nav">
+            <button type="button" class="btn btn--secondary" id="prevBtn" style="display:none;">السابق</button>
+            <button type="button" class="btn btn--primary" id="nextBtn">التالي</button>
+            <button type="submit" class="btn btn--primary" id="submitBtn" style="display:none;" data-i18n="booking.submit">تأكيد الحجز</button>
+          </div>
+          
+          <div id="formError" style="color:#ff5050; margin-top:1rem; font-size:0.9rem; display:none;"></div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="bookingSuccess" class="booking-success">
+          <i class="fa-solid fa-circle-check"></i>
+          <h2 style="margin-bottom:1rem;">تم الاستلام بنجاح</h2>
+          <p style="color:var(--silver); margin-bottom:2rem;">لقد تلقينا طلب حجزك. سيقوم أحد ممثلي خدمة العملاء بالتواصل معك قريباً لتأكيد الموعد.</p>
+          <a href="#" id="waDeepLink" class="btn btn--primary" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> تواصل عبر واتساب
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+          <p>مركز خدمة سيارات فاخر متخصص في مرسيدس ورينج روفر، الشيخ زايد – القاهرة.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/201000000000" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer__col"><h4>روابط سريعة</h4><ul><li><a href="about.html">من نحن</a></li><li><a href="services.html">خدماتنا</a></li><li><a href="brands.html">العلامات</a></li><li><a href="gallery.html">معرض الصور</a></li></ul></div>
+        <div class="footer__col"><h4>خدماتنا</h4><ul><li><a href="services.html">الصيانة الدورية</a></li><li><a href="services.html">التشخيص</a></li><li><a href="services.html">الميكانيكا</a></li><li><a href="services.html">الهيكل والدهان</a></li></ul></div>
+        <div class="footer__col"><h4>تواصل معنا</h4><ul><li><a href="tel:16618">📞 16618</a></li><li><a href="mailto:info@alrashed.com">✉ info@alrashed.com</a></li><li><a href="branches.html">📍 الشيخ زايد</a></li><li><a href="booking-status.html">🔍 تتبع حجزك</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        &copy; <span id="year"></span> AL-RASHED — <span data-i18n="footer.developed">تم التطوير بواسطة</span> <a href="https://itqansolutions.org" target="_blank" style="color:var(--gold); text-decoration:none; font-weight:bold;">Itqan Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/js/main.js"></script>
+  <script src="/js/booking.js"></script>
+</body>
+</html>

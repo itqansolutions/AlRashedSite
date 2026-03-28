@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدماتنا | الراشد لصيانة السيارات</title>
+  <meta name="description" content="خدمات الصيانة الدورية، التشخيص، الإصلاحات الميكانيكية، الهيكل والدهان، وفحص ما قبل الشراء لسيارات المرسيدس ورينج روفر في مصر.">
+  <link rel="canonical" href="https://alrashed.com.eg/services.html">
+  <meta property="og:title" content="خدماتنا | الراشد">
+  <meta property="og:image" content="/assets/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+      <ul class="navbar__links">
+        <li><a href="index.html"    data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="about.html"    data-i18n="nav.about">من نحن</a></li>
+        <li><a href="services.html" data-i18n="nav.services" class="active">خدماتنا</a></li>
+        <li><a href="brands.html"   data-i18n="nav.brands">العلامات</a></li>
+        <li><a href="gallery.html"  data-i18n="nav.gallery">معرض الصور</a></li>
+        <li><a href="branches.html" data-i18n="nav.branches">فروعنا</a></li>
+        <li><a href="contact.html"  data-i18n="nav.contact">تواصل</a></li>
+        <li><a class="btn btn--primary" href="booking.html" data-i18n="nav.booking">احجز موعدًا</a></li>
+      </ul>
+      <button id="langToggle" class="lang-toggle">EN</button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+    <a href="about.html" data-i18n="nav.about">من نحن</a>
+    <a href="services.html" data-i18n="nav.services">خدماتنا</a>
+    <a href="brands.html" data-i18n="nav.brands">العلامات</a>
+    <a href="gallery.html" data-i18n="nav.gallery">معرض الصور</a>
+    <a href="branches.html" data-i18n="nav.branches">فروعنا</a>
+    <a href="contact.html" data-i18n="nav.contact">تواصل</a>
+    <a class="btn btn--primary" href="booking.html" data-i18n="nav.booking">احجز موعدًا</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag" data-i18n="nav.services">خدماتنا</span>
+      <h1 class="page-hero__title" data-i18n="services.title">خدماتنا</h1>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section section--dark">
+    <div class="container">
+
+      <!-- Filter Tabs -->
+      <div class="services-tabs reveal">
+        <button class="tab-btn active" data-target="all">الكل</button>
+        <button class="tab-btn" data-target="maint"  data-i18n="services.maint">الصيانة الدورية</button>
+        <button class="tab-btn" data-target="diag"   data-i18n="services.diag">التشخيص</button>
+        <button class="tab-btn" data-target="mech"   data-i18n="services.mech">الميكانيكا</button>
+        <button class="tab-btn" data-target="body"   data-i18n="services.body">الهيكل والدهان</button>
+        <button class="tab-btn" data-target="insp"   data-i18n="services.insp">فحص قبل الشراء</button>
+      </div>
+
+      <div class="grid-3" id="servicesGrid">
+
+        <!-- Periodic Maintenance -->
+        <div class="service-card reveal" data-category="maint">
+          <div class="service-card__icon"><i class="fa-solid fa-oil-can"></i></div>
+          <h3 data-i18n="services.maint">الصيانة الدورية</h3>
+          <ul>
+            <li>تغيير زيت المحرك</li>
+            <li>استبدال فلتر الهواء</li>
+            <li>استبدال فلتر الوقود</li>
+            <li>فحص الفرامل</li>
+            <li>فحص مستوى السوائل</li>
+            <li>فحص الإطارات والضغط</li>
+          </ul>
+        </div>
+
+        <!-- Diagnostics -->
+        <div class="service-card reveal" data-category="diag">
+          <div class="service-card__icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3 data-i18n="services.diag">التشخيص والفحص</h3>
+          <ul>
+            <li>المسح الإلكتروني الشامل</li>
+            <li>استعادة البيانات من ECU</li>
+            <li>تشخيص مشاكل الكهرباء</li>
+            <li>فحص نظام ABS وESP</li>
+            <li>تحليل أداء المحرك</li>
+          </ul>
+        </div>
+
+        <!-- Mechanical -->
+        <div class="service-card reveal" data-category="mech">
+          <div class="service-card__icon"><i class="fa-solid fa-gears"></i></div>
+          <h3 data-i18n="services.mech">الإصلاحات الميكانيكية</h3>
+          <ul>
+            <li>إصلاح وصيانة المحرك</li>
+            <li>إصلاح ناقل الحركة</li>
+            <li>صيانة نظام التعليق</li>
+            <li>إصلاح نظام التوجيه</li>
+            <li>استبدال قطع الغيار</li>
+          </ul>
+        </div>
+
+        <!-- Body & Paint -->
+        <div class="service-card reveal" data-category="body">
+          <div class="service-card__icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+          <h3 data-i18n="services.body">الهيكل والدهان</h3>
+          <ul>
+            <li>إزالة الخدوش والمطات</li>
+            <li>إصلاح هيكل السيارة</li>
+            <li>دهان جزئي وكامل</li>
+            <li>حماية الطلاء بالسيراميك</li>
+            <li>تلميع متكامل</li>
+          </ul>
+        </div>
+
+        <!-- Pre-purchase Inspection -->
+        <div class="service-card reveal" data-category="insp">
+          <div class="service-card__icon"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3 data-i18n="services.insp">فحص ما قبل الشراء</h3>
+          <ul>
+            <li>تقرير شامل لحالة السيارة</li>
+            <li>فحص 200 نقطة</li>
+            <li>الكشف عن الحوادث</li>
+            <li>فحص الفريم والهيكل</li>
+            <li>تقييم القيمة السوقية</li>
+          </ul>
+        </div>
+
+        <!-- Book CTA Card -->
+        <div class="service-card reveal flex-center" style="background:var(--white-dim);border-style:dashed;cursor:pointer;" onclick="location.href='booking.html'">
+          <div style="text-align:center;color:var(--gold);">
+            <i class="fa-solid fa-calendar-check" style="font-size:2.5rem;margin-bottom:1rem;display:block;"></i>
+            <h3 style="color:var(--gold);margin-bottom:0.5rem;">احجز خدمتك الآن</h3>
+            <p style="color:var(--silver-dim);font-size:0.9rem;max-width:unset;">موعد سريع وخدمة احترافية</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section section--darker">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="why.title">لماذا تختارنا؟</span>
+        <h2 data-i18n="why.title">لماذا تختارنا؟</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="grid-3">
+        <div class="stat-tile reveal"><span class="stat-tile__number">20+</span><span class="stat-tile__label" data-i18n="why.tech">فنيون معتمدون</span></div>
+        <div class="stat-tile reveal"><span class="stat-tile__number">100%</span><span class="stat-tile__label" data-i18n="why.parts">قطع غيار أصلية</span></div>
+        <div class="stat-tile reveal"><span class="stat-tile__number">24h</span><span class="stat-tile__label">استجابة سريعة</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+          <p>مركز خدمة سيارات فاخر متخصص في مرسيدس ورينج روفر، الشيخ زايد – القاهرة.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/201000000000" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="about.html">من نحن</a></li><li><a href="services.html">خدماتنا</a></li>
+            <li><a href="brands.html">العلامات</a></li><li><a href="gallery.html">معرض الصور</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>خدماتنا</h4>
+          <ul>
+            <li><a href="#">الصيانة الدورية</a></li><li><a href="#">التشخيص</a></li>
+            <li><a href="#">الميكانيكا</a></li><li><a href="#">الهيكل والدهان</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>تواصل معنا</h4>
+          <ul>
+            <li><a href="tel:16618">📞 16618</a></li>
+            <li><a href="mailto:info@alrashed.com">✉ info@alrashed.com</a></li>
+            <li><a href="branches.html">📍 الشيخ زايد</a></li>
+            <li><a href="booking-status.html">🔍 تتبع حجزك</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; <span id="year"></span> AL-RASHED — <span data-i18n="footer.developed">تم التطوير بواسطة</span> <a href="https://itqansolutions.org" target="_blank" style="color:var(--gold); text-decoration:none; font-weight:bold;">Itqan Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/201000000000?text=أريد%20حجز%20خدمة" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/js/main.js"></script>
+  <script>
+    // Tab filter
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const cards   = document.querySelectorAll('#servicesGrid .service-card');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.dataset.target;
+        cards.forEach(card => {
+          const show = target === 'all' || card.dataset.category === target;
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

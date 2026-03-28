@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فروعنا | الراشد لصيانة السيارات</title>
+  <meta name="description" content="فروع وأماكن تواجد مركز الراشد لصيانة السيارات الفاخرة بالشيخ زايد والقاهرة.">
+  <link rel="canonical" href="https://alrashed.com.eg/branches.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+      <ul class="navbar__links">
+        <li><a href="index.html"    data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="about.html"    data-i18n="nav.about">من نحن</a></li>
+        <li><a href="services.html" data-i18n="nav.services">خدماتنا</a></li>
+        <li><a href="brands.html"   data-i18n="nav.brands">العلامات</a></li>
+        <li><a href="gallery.html"  data-i18n="nav.gallery">معرض الصور</a></li>
+        <li><a href="branches.html" data-i18n="nav.branches" class="active">فروعنا</a></li>
+        <li><a href="contact.html"  data-i18n="nav.contact">تواصل</a></li>
+        <li><a class="btn btn--primary" href="booking.html" data-i18n="nav.booking">احجز موعدًا</a></li>
+      </ul>
+      <button id="langToggle" class="lang-toggle">EN</button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag" data-i18n="nav.branches">فروعنا</span>
+      <h1 class="page-hero__title" data-i18n="branches.title">فروعنا</h1>
+    </div>
+  </div>
+
+  <!-- BRANCH MAP SECTION -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="branch-card reveal">
+        <!-- Google Map Embedding (placeholder coords for Sheikh Zayed / Beverly Hills) -->
+        <div class="branch-card__map">
+          <iframe title="Al-Rashed Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13813.52264962283!2d30.9575121!3d30.0558963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585c575003504d%3A0xe5a3c9a2c3ea0e14!2sSheikh%20Zayed%20City%2C%20Giza%20Governorate!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <!-- Branch Info -->
+        <div class="branch-card__info">
+          <span class="section-tag">الفرع الرئيسي</span>
+          <h3 data-i18n="branches.title">فرع الشيخ زايد</h3>
+          
+          <div class="branch-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong data-i18n="branches.addr">الشيخ زايد – بيفرلي هيلز – بوابة 9</strong>
+              <span>الجيزة، مصر</span>
+            </div>
+          </div>
+          
+          <div class="branch-info-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong data-i18n="branches.hours">ساعات العمل</strong>
+              <span data-i18n="branches.hours.val">السبت – الخميس: 9 صباحًا – 9 مساءً</span>
+              <span style="display:block; margin-top:4px; font-size:0.8rem; color:#ff5050;">الجمعة: مغلق</span>
+            </div>
+          </div>
+          
+          <div class="branch-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong data-i18n="contact.hotline">الخط الساخن</strong>
+              <a href="tel:16618" style="color:var(--silver);">16618</a>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <a href="https://maps.app.goo.gl/" class="btn btn--primary" target="_blank" rel="noopener">
+              <i class="fa-solid fa-map-location-dot"></i> افتح في خرائط جوجل
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        &copy; <span id="year"></span> AL-RASHED — <span data-i18n="footer.developed">تم التطوير بواسطة</span> <a href="https://itqansolutions.org" target="_blank" style="color:var(--gold); text-decoration:none; font-weight:bold;">Itqan Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

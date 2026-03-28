@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا | الراشد لصيانة السيارات</title>
+  <meta name="description" content="تواصل مع مركز الراشد لصيانة السيارات الفاخرة للاستفسارات، الشكاوى، أو الدعم الفني.">
+  <link rel="canonical" href="https://alrashed.com.eg/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="navbar__logo" href="index.html"><span>AL-RASHED</span></a>
+      <ul class="navbar__links">
+        <li><a href="index.html"    data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="about.html"    data-i18n="nav.about">من نحن</a></li>
+        <li><a href="services.html" data-i18n="nav.services">خدماتنا</a></li>
+        <li><a href="brands.html"   data-i18n="nav.brands">العلامات</a></li>
+        <li><a href="gallery.html"  data-i18n="nav.gallery">معرض الصور</a></li>
+        <li><a href="branches.html" data-i18n="nav.branches">فروعنا</a></li>
+        <li><a href="contact.html"  data-i18n="nav.contact" class="active">تواصل</a></li>
+        <li><a class="btn btn--primary" href="booking.html" data-i18n="nav.booking">احجز موعدًا</a></li>
+      </ul>
+      <button id="langToggle" class="lang-toggle">EN</button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+    <a href="about.html" data-i18n="nav.about">من نحن</a>
+    <a href="services.html" data-i18n="nav.services">خدماتنا</a>
+    <a href="brands.html" data-i18n="nav.brands">العلامات</a>
+    <a href="gallery.html" data-i18n="nav.gallery">معرض الصور</a>
+    <a href="branches.html" data-i18n="nav.branches">فروعنا</a>
+    <a class="btn btn--primary" href="booking.html" data-i18n="nav.booking">احجز موعدًا</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag" data-i18n="nav.contact">تواصل</span>
+      <h1 class="page-hero__title" data-i18n="contact.title">تواصل معنا</h1>
+    </div>
+  </div>
+
+  <section class="section section--darker">
+    <div class="container" style="display:grid; grid-template-columns: 1fr 1fr; gap:3rem; align-items:start;">
+      
+      <!-- Contact Info -->
+      <div class="reveal">
+        <h2 style="margin-bottom:1rem;" data-i18n="contact.title">نحن هنا لمساعدتك</h2>
+        <p style="color:var(--silver); line-height:1.7; margin-bottom:2rem;" data-i18n="contact.subtitle">
+          لديك استفسار أو تود معرفة المزيد عن خدماتنا؟ فريق خدمة العملاء جاهز للرد على جميع تساؤلاتك.
+        </p>
+
+        <div class="contact-strip reveal" style="padding:1.5rem; justify-content:flex-start; margin-bottom:1rem;">
+          <div class="contact-strip__item" style="text-align:right;">
+            <i class="fa-solid fa-phone" style="font-size:1.5rem;"></i>
+            <span data-i18n="contact.hotline">الخط الساخن</span>
+            <strong>16618</strong>
+          </div>
+        </div>
+
+        <div class="contact-strip reveal" style="padding:1.5rem; justify-content:flex-start; margin-bottom:1rem;">
+          <div class="contact-strip__item" style="text-align:right;">
+            <i class="fa-brands fa-whatsapp" style="font-size:1.5rem;"></i>
+            <span>WhatsApp</span>
+            <strong>+20 100 000 0000</strong>
+          </div>
+        </div>
+
+        <div class="contact-strip reveal" style="padding:1.5rem; justify-content:flex-start; margin-bottom:1rem;">
+          <div class="contact-strip__item" style="text-align:right;">
+            <i class="fa-solid fa-envelope" style="font-size:1.5rem;"></i>
+            <span data-i18n="contact.email">البريد الإلكتروني</span>
+            <strong style="text-transform:lowercase;">info@alrashed.com.eg</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form id="contactForm" class="contact-form-box reveal">
+        <h3 style="margin-bottom:1.5rem; color:var(--gold);" data-i18n="contact.box">أرسل رسالة</h3>
+        
+        <div class="form-group">
+          <label for="name" data-i18n="booking.name">الاسم</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="contactInfo" data-i18n="booking.phone">رقم الهاتف أو البريد الإلكتروني</label>
+          <input type="text" id="contactInfo" name="contactInfo" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message" data-i18n="contact.msg">رسالتك</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary" id="submitBtn" style="width:100%;">
+          <i class="fa-solid fa-paper-plane" style="margin-inline-end:8px;"></i>
+          <span data-i18n="contact.send">إرسال</span>
+        </button>
+
+        <div id="formStatus" style="margin-top:1rem; font-size:0.9rem; text-align:center; display:none;"></div>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        &copy; <span id="year"></span> AL-RASHED — <span data-i18n="footer.developed">تم التطوير بواسطة</span> <a href="https://itqansolutions.org" target="_blank" style="color:var(--gold); text-decoration:none; font-weight:bold;">Itqan Solutions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/js/main.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>
