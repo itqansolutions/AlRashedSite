@@ -68,14 +68,14 @@ async function loadLang(lang) {
 const langToggle = document.getElementById('langToggle');
 if (langToggle) {
   langToggle.addEventListener('click', () => {
-    const current = localStorage.getItem('lang') || 'ar';
+    const current = localStorage.getItem('lang') || 'en';
     loadLang(current === 'ar' ? 'en' : 'ar');
   });
 }
 
 // Load saved or default language on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('lang') || 'ar';
+  const savedLang = localStorage.getItem('lang') || 'en';
   loadLang(savedLang);
 });
 
