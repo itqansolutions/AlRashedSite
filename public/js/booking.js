@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = Object.fromEntries(formData);
 
       try {
-        const res = await fetch('/api/bookings', {
+        const res = await fetch('api/bookings', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)

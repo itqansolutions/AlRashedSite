@@ -484,7 +484,7 @@
   align-items: flex-end;
   padding-bottom: 3rem;
   background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(13,13,13,1)),
-              url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+              url('../assets/images/hero-bg.jpg') center/cover no-repeat;
   padding-top: var(--nav-h);
 }
 .page-hero__title { font-size: clamp(2rem, 4vw, 3rem); }

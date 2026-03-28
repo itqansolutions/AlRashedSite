@@ -40,7 +40,7 @@ if (hamburger && mobileNav) {
 // ── i18n ──────────────────────────────────────────────────────
 async function loadLang(lang) {
   try {
-    const res  = await fetch(`/lang/${lang}.json`);
+    const res  = await fetch(`lang/${lang}.json`);
     const dict = await res.json();
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;

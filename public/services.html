@@ -12,10 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/components.css">
-  <link rel="stylesheet" href="/css/pages.css">
-  <link rel="icon" href="/assets/logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
 </head>
 <body>
 
@@ -77,12 +77,12 @@
           <div class="service-card__icon"><i class="fa-solid fa-oil-can"></i></div>
           <h3 data-i18n="services.maint">الصيانة الدورية</h3>
           <ul>
-            <li>تغيير زيت المحرك</li>
-            <li>استبدال فلتر الهواء</li>
-            <li>استبدال فلتر الوقود</li>
+            <li><span data-i18n="services.s.oil">تغيير زيت المحرك</span></li>
+            <li><span data-i18n="services.s.air">استبدال فلتر الهواء</span></li>
+            <li><span data-i18n="services.s.fuel">استبدال فلتر الوقود</span></li>
             <li data-i18n="services.sub.brakes">فحص الفرامل</li>
-            <li>فحص مستوى السوائل</li>
-            <li>فحص الإطارات والضغط</li>
+            <li><span data-i18n="services.s.fluid">فحص مستوى السوائل</span></li>
+            <li><span data-i18n="services.s.tires">فحص الإطارات والضغط</span></li>
           </ul>
         </div>
 
@@ -92,10 +92,10 @@
           <h3 data-i18n="services.diag">التشخيص والفحص</h3>
           <ul>
             <li><span data-i18n="services.sub.scan">المسح الإلكتروني</span> الشامل</li>
-            <li>استعادة البيانات من ECU</li>
-            <li>تشخيص مشاكل الكهرباء</li>
+            <li><span data-i18n="services.s.ecu">استعادة البيانات من ECU</span></li>
+            <li><span data-i18n="services.sub.elec">تشخيص مشاكل الكهرباء</span></li>
             <li>فحص نظام ABS وESP</li>
-            <li>تحليل أداء المحرك</li>
+            <li><span data-i18n="services.s.perf">تحليل أداء المحرك</span></li>
           </ul>
         </div>
 
@@ -106,9 +106,9 @@
           <ul>
             <li>إصلاح وصيانة المحرك</li>
             <li data-i18n="services.sub.trans">إصلاح ناقل الحركة</li>
-            <li>صيانة نظام التعليق</li>
-            <li>إصلاح نظام التوجيه</li>
-            <li>استبدال قطع الغيار</li>
+            <li><span data-i18n="services.s.susp">صيانة نظام التعليق</span></li>
+            <li><span data-i18n="services.s.steer">إصلاح نظام التوجيه</span></li>
+            <li><span data-i18n="services.s.parts">استبدال قطع الغيار</span></li>
           </ul>
         </div>
 
@@ -214,7 +214,7 @@
   </a>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="/js/main.js"></script>
+  <script src="js/main.js"></script>
   <script>
     // Tab filter
     const tabBtns = document.querySelectorAll('.tab-btn');
