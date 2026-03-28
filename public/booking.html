@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>احجز موعدك | الراشد لصيانة السيارات</title>
+  <title data-i18n="auto_110">احجز موعدك | الراشد لصيانة السيارات</title>
   <meta name="description" content="احجز موعد صيانة لسيارتك المرسيدس أو رينج روفر في مركز الراشد بخطوات بسيطة.">
   <link rel="canonical" href="https://alrashed.com.eg/booking.html">
   <meta property="og:title" content="احجز موعدك | الراشد">
@@ -25,9 +25,9 @@
       <a class="navbar__logo" href="index.html"></a>
       <ul class="navbar__links">
         <li><a href="index.html"    data-i18n="nav.home">الرئيسية</a></li>
-        <li><a href="about.html"    data-i18n="nav.about">من نحن</a></li>
+        <li><a href="about.html"    data-i18n="auto_152" data-i18n="auto_152">من نحن</a></li>
         <li><a href="services.html" data-i18n="nav.services">خدماتنا</a></li>
-        <li><a href="brands.html"   data-i18n="nav.brands">العلامات</a></li>
+        <li><a href="brands.html"   data-i18n="auto_146" data-i18n="auto_146">العلامات</a></li>
         <li><a href="gallery.html"  data-i18n="nav.gallery">معرض الصور</a></li>
         <li><a href="branches.html" data-i18n="nav.branches">فروعنا</a></li>
         <li><a href="contact.html"  data-i18n="nav.contact">تواصل</a></li>
@@ -39,9 +39,9 @@
   </nav>
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html" data-i18n="nav.home">الرئيسية</a>
-    <a href="about.html" data-i18n="nav.about">من نحن</a>
+    <a href="about.html" data-i18n="auto_152" data-i18n="auto_152">من نحن</a>
     <a href="services.html" data-i18n="nav.services">خدماتنا</a>
-    <a href="brands.html" data-i18n="nav.brands">العلامات</a>
+    <a href="brands.html" data-i18n="auto_146" data-i18n="auto_146">العلامات</a>
     <a href="gallery.html" data-i18n="nav.gallery">معرض الصور</a>
     <a href="branches.html" data-i18n="nav.branches">فروعنا</a>
     <a href="contact.html" data-i18n="nav.contact">تواصل</a>
@@ -84,7 +84,7 @@
             <h3 style="margin-bottom:1.5rem; color:var(--gold);" data-i18n="booking.step1">المعلومات الشخصية</h3>
             <div class="form-group">
               <label for="name" data-i18n="booking.name">الاسم الكامل</label>
-              <input type="text" id="name" name="name" required placeholder="مثال: أحمد محمد">
+              <input type="text" id="name" name="name" required placeholder="مثال: أحمد محمد" data-i18n-placeholder="auto_127">
             </div>
             <div class="form-group">
               <label for="phone" data-i18n="booking.phone">رقم الهاتف</label>
@@ -98,7 +98,7 @@
             <div class="form-group">
               <label for="brand" data-i18n="booking.brand">العلامة التجارية</label>
               <select id="brand" name="brand" required>
-                <option value="" disabled selected>اختر العلامة التجارية</option>
+                <option value="" disabled selected data-i18n="auto_119">اختر العلامة التجارية</option>
                 <option value="Mercedes-Benz">Mercedes-Benz</option>
                 <option value="Range Rover">Range Rover</option>
               </select>
@@ -106,14 +106,14 @@
             <div class="form-group">
               <label for="model" data-i18n="booking.model">الموديل</label>
               <select id="model" name="model" required disabled>
-                <option value="" disabled selected>اختر الموديل</option>
+                <option value="" disabled selected data-i18n="auto_136">اختر الموديل</option>
                 <!-- Populated by JS based on Brand -->
               </select>
             </div>
             <div class="form-group">
               <label for="year" data-i18n="booking.year">سنة الصنع</label>
               <select id="year" name="year" required disabled>
-                <option value="" disabled selected>اختر السنة</option>
+                <option value="" disabled selected data-i18n="auto_142">اختر السنة</option>
                 <!-- Populated by JS (2000-2025) -->
               </select>
             </div>
@@ -125,7 +125,7 @@
             <div class="form-group">
               <label for="service" data-i18n="booking.service">الخدمة المطلوبة</label>
               <select id="service" name="service" required>
-                <option value="" disabled selected>اختر الخدمة</option>
+                <option value="" disabled selected data-i18n="auto_140">اختر الخدمة</option>
                 <option value="الصيانة الدورية" data-i18n="services.maint">الصيانة الدورية</option>
                 <option value="التشخيص والفحص" data-i18n="services.diag">التشخيص والفحص</option>
                 <option value="الإصلاحات الميكانيكية" data-i18n="services.mech">الإصلاحات الميكانيكية</option>
@@ -141,8 +141,8 @@
 
           <!-- Navigation Buttons -->
           <div class="booking-nav">
-            <button type="button" class="btn btn--secondary" id="prevBtn" style="display:none;">السابق</button>
-            <button type="button" class="btn btn--primary" id="nextBtn">التالي</button>
+            <button type="button" class="btn btn--secondary" id="prevBtn" style="display:none;" data-i18n="auto_149">السابق</button>
+            <button type="button" class="btn btn--primary" id="nextBtn" data-i18n="auto_150">التالي</button>
             <button type="submit" class="btn btn--primary" id="submitBtn" style="display:none;" data-i18n="booking.submit">تأكيد الحجز</button>
           </div>
           
@@ -152,8 +152,8 @@
         <!-- Success Message -->
         <div id="bookingSuccess" class="booking-success">
           <i class="fa-solid fa-circle-check"></i>
-          <h2 style="margin-bottom:1rem;">تم الاستلام بنجاح</h2>
-          <p style="color:var(--silver); margin-bottom:2rem;">لقد تلقينا طلب حجزك. سيقوم أحد ممثلي خدمة العملاء بالتواصل معك قريباً لتأكيد الموعد.</p>
+          <h2 style="margin-bottom:1rem;" data-i18n="auto_124">تم الاستلام بنجاح</h2>
+          <p style="color:var(--silver); margin-bottom:2rem;" data-i18n="auto_105">لقد تلقينا طلب حجزك. سيقوم أحد ممثلي خدمة العملاء بالتواصل معك قريباً لتأكيد الموعد.</p>
           <a href="#" id="waDeepLink" class="btn btn--primary" target="_blank" rel="noopener">
             <i class="fa-brands fa-whatsapp"></i> تواصل عبر واتساب
           </a>
@@ -176,9 +176,9 @@
             <a href="https://wa.me/201000000000" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
-        <div class="footer__col"><h4 data-i18n="footer.links">روابط سريعة</h4><ul><li><a href="about.html">من نحن</a></li><li><a href="services.html">خدماتنا</a></li><li><a href="brands.html">العلامات</a></li><li><a href="gallery.html">معرض الصور</a></li></ul></div>
+        <div class="footer__col"><h4 data-i18n="footer.links">روابط سريعة</h4><ul><li><a href="about.html" data-i18n="auto_152">من نحن</a></li><li><a href="services.html">خدماتنا</a></li><li><a href="brands.html" data-i18n="auto_146">العلامات</a></li><li><a href="gallery.html">معرض الصور</a></li></ul></div>
         <div class="footer__col"><h4 data-i18n="footer.services">خدماتنا</h4><ul><li><a href="services.html" data-i18n="services.maint">الصيانة الدورية</a></li><li><a href="services.html" data-i18n="services.diag">التشخيص</a></li><li><a href="services.html" data-i18n="services.mech">الميكانيكا</a></li><li><a href="services.html" data-i18n="services.body">الهيكل والدهان</a></li></ul></div>
-        <div class="footer__col"><h4 data-i18n="footer.contact">تواصل معنا</h4><ul><li><a href="tel:16618">📞 16618</a></li><li><a href="mailto:info@alrashed.com">✉ info@alrashed.com</a></li><li><a href="branches.html">📍 الشيخ زايد</a></li><li><a href="booking-status.html">🔍 تتبع حجزك</a></li></ul></div>
+        <div class="footer__col"><h4 data-i18n="footer.contact">تواصل معنا</h4><ul><li><a href="tel:16618">📞 16618</a></li><li><a href="mailto:info@alrashed.com">✉ info@alrashed.com</a></li><li><a href="branches.html" data-i18n="auto_130">📍 الشيخ زايد</a></li><li><a href="booking-status.html" data-i18n="auto_134">🔍 تتبع حجزك</a></li></ul></div>
       </div>
       <div class="footer__bottom">
         &copy; <span id="year"></span> AL-RASHED — <span data-i18n="footer.developed">تم التطوير بواسطة</span> <a href="https://itqansolutions.org" target="_blank" style="color:var(--gold); text-decoration:none; font-weight:bold;">Itqan Solutions</a>

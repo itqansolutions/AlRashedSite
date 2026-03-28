@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تتبع الحجز | الراشد لصيانة السيارات</title>
+  <title data-i18n="auto_57">تتبع الحجز | الراشد لصيانة السيارات</title>
   <link rel="canonical" href="https://alrashed.com.eg/booking-status.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,12 +75,12 @@
     <div class="container" style="max-width: 600px;">
       
       <div class="contact-form-box reveal" style="padding: 2.5rem;">
-        <h3 style="margin-bottom:1rem; text-align:center;">أدخل رقم الهاتف للبحث</h3>
-        <p style="text-align:center; color:var(--silver); font-size:0.9rem; margin-bottom:2rem;">ابحث برقم الهاتف الذي سجلت به الحجز لمتابعة حالة الموعد.</p>
+        <h3 style="margin-bottom:1rem; text-align:center;" data-i18n="auto_66">أدخل رقم الهاتف للبحث</h3>
+        <p style="text-align:center; color:var(--silver); font-size:0.9rem; margin-bottom:2rem;" data-i18n="auto_55">ابحث برقم الهاتف الذي سجلت به الحجز لمتابعة حالة الموعد.</p>
         
         <form id="statusForm">
           <div class="form-group" style="display:flex; gap:10px;">
-            <input type="tel" id="searchPhone" name="phone" placeholder="رقم الهاتف..." required style="flex:1;">
+            <input type="tel" id="searchPhone" name="phone" placeholder="رقم الهاتف..." data-i18n-placeholder="auto_79" required style="flex:1;">
             <button type="submit" class="btn btn--primary" id="searchBtn">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -148,9 +148,9 @@
               card.innerHTML = `
                 <div class="status-badge">${statusText}</div>
                 <div class="status-details">
-                  <p><strong>السيارة:</strong> ${booking.brand} ${booking.model} (${booking.year})</p>
-                  <p><strong>الخدمة:</strong> ${booking.service}</p>
-                  <p><strong>تاريخ الطلب:</strong> ${new Date(booking.date).toLocaleDateString()}</p>
+                  <p><strong data-i18n="auto_92">السيارة:</strong> ${booking.brand} ${booking.model} (${booking.year})</p>
+                  <p><strong data-i18n="auto_95">الخدمة:</strong> ${booking.service}</p>
+                  <p><strong data-i18n="auto_83">تاريخ الطلب:</strong> ${new Date(booking.date).toLocaleDateString()}</p>
                 </div>
               `;
               resultsContainer.appendChild(card);
