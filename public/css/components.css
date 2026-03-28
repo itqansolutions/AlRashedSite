@@ -32,9 +32,10 @@
   font-size: 1.3rem;
   font-weight: 800;
   letter-spacing: 0.05em;
+  text-decoration: none;
 }
-.navbar__logo img  { height: 42px; width: auto; }
-.navbar__logo span { color: var(--gold); }
+.navbar__logo img  { height: auto; max-height: 48px; max-width: 180px; object-fit: contain; }
+.navbar__logo span { color: var(--gold); display: none; }
 
 /* Nav links */
 .navbar__links {

@@ -134,46 +134,46 @@
           <div class="service-card__icon"><i class="fa-solid fa-wrench"></i></div>
           <h3 data-i18n="services.maint">الصيانة الدورية</h3>
           <ul>
-            <li>تغيير الزيت</li>
-            <li>استبدال الفلاتر</li>
-            <li>فحص الفرامل</li>
+            <li data-i18n="services.sub.oil">تغيير الزيت</li>
+            <li data-i18n="services.sub.filter">استبدال الفلاتر</li>
+            <li data-i18n="services.sub.brakes">فحص الفرامل</li>
           </ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__icon"><i class="fa-solid fa-microchip"></i></div>
           <h3 data-i18n="services.diag">التشخيص والفحص</h3>
           <ul>
-            <li>المسح الإلكتروني</li>
-            <li>حل مشاكل الكهرباء</li>
+            <li data-i18n="services.sub.scan">المسح الإلكتروني</li>
+            <li data-i18n="services.sub.elec">حل مشاكل الكهرباء</li>
           </ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__icon"><i class="fa-solid fa-gears"></i></div>
           <h3 data-i18n="services.mech">الإصلاحات الميكانيكية</h3>
           <ul>
-            <li>إصلاح المحرك</li>
-            <li>إصلاح ناقل الحركة</li>
+            <li data-i18n="services.sub.engine">إصلاح المحرك</li>
+            <li data-i18n="services.sub.trans">إصلاح ناقل الحركة</li>
           </ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
           <h3 data-i18n="services.body">الهيكل والدهان</h3>
           <ul>
-            <li>إزالة الخدوش</li>
-            <li>دهان كامل</li>
+            <li data-i18n="services.sub.scratch">إزالة الخدوش</li>
+            <li data-i18n="services.sub.paint">دهان كامل</li>
           </ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__icon"><i class="fa-solid fa-clipboard-check"></i></div>
           <h3 data-i18n="services.insp">فحص ما قبل الشراء</h3>
           <ul>
-            <li>تقرير شامل لحالة السيارة</li>
+            <li data-i18n="services.sub.report">تقرير شامل لحالة السيارة</li>
           </ul>
         </div>
         <div class="service-card reveal flex-center" style="background: var(--white-dim); border-style: dashed; cursor: pointer;" onclick="location.href='services.html'">
           <div style="text-align:center; color: var(--gold);">
             <i class="fa-solid fa-arrow-left" style="font-size:2rem; margin-bottom:1rem;"></i>
-            <p data-i18n="services.title" style="color:var(--gold); max-width:unset;">كل الخدمات</p>
+            <p data-i18n="services.all" style="color:var(--gold); max-width:unset;">كل الخدمات</p>
           </div>
         </div>
       </div>
@@ -217,18 +217,18 @@
         <!-- Loaded from /api/testimonials or static fallback -->
         <div class="testimonial-card reveal">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">"خدمة ممتازة وسريعة، ورشة نظيفة ومنظمة، والفنيين محترفين جداً."</p>
-          <span class="testimonial-card__author">أحمد محمد</span>
+          <p class="testimonial-card__text" data-i18n="reviews.1.text">"خدمة ممتازة وسريعة، ورشة نظيفة ومنظمة، والفنيين محترفين جداً."</p>
+          <span class="testimonial-card__author" data-i18n="reviews.1.name">أحمد محمد</span>
         </div>
         <div class="testimonial-card reveal">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">"أفضل مركز صيانة لسيارات الفخامة في مصر – أنصح به بشدة."</p>
-          <span class="testimonial-card__author">سارة أحمد</span>
+          <p class="testimonial-card__text" data-i18n="reviews.2.text">"أفضل مركز صيانة لسيارات الفخامة في مصر – أنصح به بشدة."</p>
+          <span class="testimonial-card__author" data-i18n="reviews.2.name">سارة أحمد</span>
         </div>
         <div class="testimonial-card reveal">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">"استلمت سيارتي في الوقت المحدد وبجودة عالية جداً."</p>
-          <span class="testimonial-card__author">خالد عمر</span>
+          <p class="testimonial-card__text" data-i18n="reviews.3.text">"استلمت سيارتي في الوقت المحدد وبجودة عالية جداً."</p>
+          <span class="testimonial-card__author" data-i18n="reviews.3.name">خالد عمر</span>
         </div>
       </div>
     </div>
@@ -250,7 +250,7 @@
           <div>
             <span>WhatsApp</span>
             <a href="https://wa.me/201000000000?text=أريد%20حجز%20خدمة" target="_blank" rel="noopener">
-              <strong>تحدث معنا</strong>
+              <strong data-i18n="whatsapp.text">تحدث معنا</strong>
             </a>
           </div>
         </div>
@@ -280,7 +280,7 @@
           <a class="navbar__logo" href="index.html">
             <span>AL-RASHED</span>
           </a>
-          <p>مركز خدمة سيارات فاخر متخصص في مرسيدس ورينج روفر، الشيخ زايد – القاهرة.</p>
+          <p data-i18n="footer.desc">مركز خدمة سيارات فاخر متخصص في مرسيدس ورينج روفر، الشيخ زايد – القاهرة.</p>
           <div class="footer__socials">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -288,7 +288,7 @@
           </div>
         </div>
         <div class="footer__col">
-          <h4>روابط سريعة</h4>
+          <h4 data-i18n="footer.links">روابط سريعة</h4>
           <ul>
             <li><a href="about.html"    data-i18n="nav.about">من نحن</a></li>
             <li><a href="services.html" data-i18n="nav.services">خدماتنا</a></li>
@@ -297,7 +297,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>خدماتنا</h4>
+          <h4 data-i18n="footer.services">خدماتنا</h4>
           <ul>
             <li><a href="services.html" data-i18n="services.maint">الصيانة الدورية</a></li>
             <li><a href="services.html" data-i18n="services.diag">التشخيص</a></li>
@@ -306,7 +306,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>تواصل معنا</h4>
+          <h4 data-i18n="footer.contact">تواصل معنا</h4>
           <ul>
             <li><a href="tel:16618">📞 16618</a></li>
             <li><a href="mailto:info@alrashed.com">✉ info@alrashed.com</a></li>
