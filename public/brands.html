@@ -32,16 +32,11 @@
       text-align: center;
       transition: background var(--transition);
     }
-    .brand-hero__panel--merc  { background: linear-gradient(160deg, #0d0d0d, #1c1c1c); }
+    .brand-hero__panel--merc  { background: linear-gradient(160deg, #0d0d0d, #1c1c1c); border-left: 1px solid var(--gold-dark); }
     .brand-hero__panel--range { background: linear-gradient(160deg, #1a1208, #2a1e08); border-right: none; }
     .brand-hero__panel img    { height: 70px; width:auto; filter:brightness(0.9); }
     .brand-hero__panel h2     { font-size:1.8rem; }
     .brand-hero__panel p      { color: var(--silver-dim); font-size: 0.95rem; max-width: 30ch; margin:0 auto; }
-    .brand-divider {
-      width: 1px;
-      background: var(--gold-dark);
-      align-self: stretch;
-    }
     .models-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -63,7 +58,7 @@
     .model-chip:hover { border-color: var(--gold); color: var(--gold); }
     @media (max-width: 768px) {
       .brand-hero { grid-template-columns: 1fr; }
-      .brand-divider { display: none; }
+      .brand-hero__panel--merc { border-left: none; border-bottom: 1px solid var(--gold-dark); }
     }
   </style>
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
@@ -107,7 +102,6 @@
       <p data-i18n="brands.all">جميع الموديلات مدعومة</p>
       <a href="booking.html?brand=mercedes" class="btn btn--ghost" data-i18n="nav.booking">احجز موعدًا</a>
     </div>
-    <div class="brand-divider"></div>
     <div class="brand-hero__panel brand-hero__panel--range">
       <img src="assets/brands/rangerover.png" alt="Range Rover" loading="lazy" >
       <h2>Range Rover</h2>
